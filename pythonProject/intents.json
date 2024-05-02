@@ -1,0 +1,83 @@
+{"intents": [
+  {"tag": "greeting",
+    "patterns": ["Hi", "Is anyone there?", "Hello", "Whats up", "Hey", "greetings"],
+    "responses": ["Hello!", "Hi there, how can I help?"],
+    "context_set": ""
+  },
+  {"tag": "goodbye",
+    "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "cao", "see ya"],
+    "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+    "context_set": ""
+  },
+  {"tag": "How are you?",
+    "patterns": ["How are you?", "how you doing"],
+    "responses": ["I'm great", "Doing great"],
+    "context_set": ""
+  },
+  {"tag": "SyAT",
+    "patterns": ["What is SyAT?", "What is System Archiving Tool?", "Tell me about SyAT", "Tell me about System Archiving Tool", "SyAT", "syat"],
+    "responses": ["The System Archiving Tool (SyAT) is a tool to download multiple elements present under a Release Request's Link tab in one go."],
+    "context_set": ""
+  },
+  {"tag": "SyAT how to use",
+    "patterns": ["How to use SyAT?", "How to use System Archiving Tool?", "How can I learn to use System Archiving Tool", "How can I learn to use SyAT", "Can you tell me how to use SyAT?"],
+    "responses": ["Step 1: Collect the Release Request Jazz link, for which the artifacts are to be archived.\n\nStep 2: Log-in to the Jenkins, using the respective link:\n\nSystem_Archiving_Tool_HBS: https://fr07010vma.cw01.contiwan.com:8443/job/System_Archiving_Tool_HBS/build?delay=0sec\nSystem_Archiving_Tool_PSS: https://fr07010vma.cw01.contiwan.com:8443/job/System_Archiving_Tool_PSS/build?delay=0sec\nSystem_Archiving_Tool_VED: https://fr07010vma.cw01.contiwan.com:8443/job/System_Archiving_Tool_VED/build?delay=0sec\n\nStep 3: After successful log-in, the following screen would be displayed(For an instance, the link for System_Archiving_Tool_VED, has been used). Now, provide a valid Release Request link in the JazzItemLink bar.\n\nStep 5: The Jenkins job will start after the Build  button is pressed and once the job is finished, the downloaded artifacts will be attached to the job. \n\nStep 6: Once the job is started, the user need not monitor its progress. The user will receive an e-mail after the job runs to completion. Until this time, the user need not monitor the job's progress"],
+    "context_set": ""
+  },
+  {"tag": "What are Release Request?",
+    "patterns": ["What are Release Request?", "Tell me about Release Request", "Explain Release Request", "release request", "Release requests", "RR", "workitem"],
+    "responses": ["A Release Request is a type of a Work Item in Jazz, which is used for Project Release. \nThe Release Request will only be processed if it is in Reviewed, Released or Archived state.\nRelease Request can contain the following type of Links:\n1. Change Set\n2. Related Artifacts\n3 Attachments\n4 Children\n5 Tracks"],
+    "context_set": ""
+  },
+  {"tag": "SyAT Installation",
+    "patterns": ["How to install SyAT?", "How to install System Archiving Tool?", "Installation process of System Archiving Tool", "Installation process of SyAT", "syat install"],
+    "responses": ["SyAT does not require any software installation on the client's machine. SyAT, thereby facilitates archiving artifacts as the software isn't dependent on the user's machine."],
+    "context_set": ""
+  },
+  {"tag": "Links unsupported by SyAT",
+    "patterns": ["What type of link SyAT doesn't support?", "What type of link System Archiving Tool doesn't support?", "which links are unsupported by SyAT?", "limitations", "limitations of syat"],
+    "responses": ["If a Release Request is present inside a Children and Tracks, it will not be downloaded.\nJazz Stream \"the entire project\" is not supported in SyAT.\nIf the Release Request is of type software(SW), then Children and Tracks will not be downloaded.\nCustomer ReleaseRequest cannot contain File/Folder links belonging to Project Area other than EBS_DocumentManagement_DM/ESS_DocumentManagement_DM Project Area in Streams. \n\nStream Snapshot of any Project Area except from the VED_SW_ReleaseDocumentation Project Area will not be downloaded."],
+    "context_set": ""
+  },
+  {"tag": "Other Features of SyAT",
+    "patterns": ["Tell some other features of SyAT", "Tell some other features of System Archiving Tool", "Tell me some features of System Archiving Tool", "Tell me some features of SyAT"],
+    "responses": ["1. SyAT Widget : UI introduced in order to access SyAT by being inside jazz server only.\n2. SyAT Dashboard: To Track usage of SyAT and be informed of any irregularities happening in SyAT."],
+    "context_set": ""
+  },
+  {"tag": "Appreciation",
+    "patterns": ["Impressive", "Looks Good", "You're smart", "It's appreciable"],
+    "responses": ["Thanks alot!!"],
+    "context_set": ""
+  },
+  {"tag": "Error Report",
+    "patterns": ["Error Report", "What is error report", "error of syat", "syat error", "errors in release request", "error fetching"],
+    "responses": ["An Error Report will be generated in case of a build failure. The Error Report will be obtained from the Jenkins Job. The user can access it by clicking on the link provided in the e-mail as shown above.\nThe user needs to check the error report and rectify the errors and restart the tool. For each error encountered, the Error Report will display the following:\n\nThe cause of the error\nThe top-down relationship hierarchy from the input Release Request to the erroneous link:\nfirst link in the hierarchy is the input Release Request;\nlast link in the hierarchy is the link containing the error displayed previously."],
+    "context_set": ""
+  },
+  {"tag": "Log file",
+    "patterns": ["log file of syat", "syat log file", "log of system archiving tool", "log of release request","log file of syat", "logs"],
+    "responses": ["A log file is available after the build process is complete. It can be seen as a text file and has information and warnings regarding the build process."],
+    "context_set": ""
+  },
+  {"tag": "RESTART functionality",
+    "patterns": ["What is RESTART functionality?", "RESTART functionality", "waht do you mean RESTART functionality", "tell me about RESTART functionality","RESTART functionality of syat", "RESTART functionality of systemmarchiving Tool","What is RESTART feature?"],
+    "responses": ["The SyAT tool is meant to download multiple elements present under a Release Request's Link tab in one go.\n\nIf in any case the already downloaded RR must be archived again (due to modifications like adding or deleting any related items ), the RESTART functionality can be availed with the help of SyAT team."],
+    "context_set": ""
+  },
+  {"tag": "Prerequisite of RESTART functionality",
+    "patterns": ["Prerequisite of RESTART functionality", "things required to use RESTART functionality", "requirement for RESTART functionality", "requirement for RESTART functionality for release request","RESTART functionality"],
+    "responses": ["1. The Release Request must be archived once and there should be any relevant change in the Release Request (added/removed), for which the archive is different from the already created one.\n2. For the above change in the Release Request , the discussion field must be updated with the Key-word \"Restart Archiving\" of a Release Request.\n3. The Release Request must be in any of these \" Reviewed, Released & Archived\" state and the last modified date must be changed.\nA JSD ticket raised by the user from this link."],
+    "context_set": ""
+  },
+  {"tag": "RESTART functionality Use",
+    "patterns": ["How to use the RESTART functionality?", "syat restart functionality", "how to restart my release request"],
+    "responses": ["1. The users need to raise a JSD ticket to the SyAT team\n\n2. The SyAT responsible will take over the ticket and perform the archiving process for the provided Release Request.\n\n3. The result will be shared like the SyAT usual archiving process via email which includes the Jenkins Job link, from where you can get the new archive.\n\n4. The existing Jenkins Jobs corresponding to different BUs cannot be used for RESTART functionality.\n\n5. There is a separate job, which is accessible only for the SyAT team, for which the user needs to raise a JSD ticket as mentioned above."],
+    "context_set": ""
+  },
+  {"tag": "Help and Support",
+    "patterns": ["How to raise ticket for syat", "ticket", "i need more help", "support for syat", "help for system archiving tool", "user support"],
+    "responses": ["If you have any issues or questions related to SyAT, go on this https://jira.auto.continental.cloud/plugins/servlet/desk/portal/1 .\n1. Select the Service Request option available.\n 2. Fill the dialogue box that pops up on the screen. Here, the Tool/Process Area will be System Archiving Tool (SyAT). The details have to be filled as per the query or issue.\n 3. Click on the Create button on the above image to create your ticket. The issue has now been reported and would be resolved. "],
+    "context_set": ""
+  }
+]
+}
